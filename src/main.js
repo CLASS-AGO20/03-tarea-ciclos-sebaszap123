@@ -7,11 +7,11 @@ export default class App {
     return suma;
   }
 
-    sumatoriaSerieDos(numero) {
+  sumatoriaSerieDos(numero) {
     let suma = 0;
     let i = 1;
     while (i <= numero) {
-      if ((i != 1 && i % 2 != 0)) {
+      if (i != 1 && i % 2 != 0) {
         suma = suma - 1 / i;
       } else if (i % 2 === 0 || i == 1) {
         suma = suma + 1 / i;
@@ -19,6 +19,17 @@ export default class App {
       i++;
     }
     return suma;
+  }
+
+  esPrimo(numero) {
+    let resultado;
+    do {
+      if ((numero = 1 && numero % 2 !== 0)) {
+        resultado = false;
+      } else if (numero % 2 == 0) {
+        resultado = true;
+      }
+    } while (numero >= 1);
   }
 }
 
@@ -28,4 +39,6 @@ console.log(app.sumatoriaSerieUno(2));
 
 console.log(app.sumatoriaSerieDos(2));
 console.log(app.sumatoriaSerieDos(3));
-console.log(app.sumatoriaSerieDos(7)); 
+console.log(app.sumatoriaSerieDos(7));
+
+console.log(app.esPrimo(3))
