@@ -76,19 +76,23 @@ export default class App {
 }
 
 let app = new App();
-
+console.log("Sumatoria serie uno:");
 console.log(app.sumatoriaSerieUno(2));
 
+console.log("Sumatoria serie dos:");
 console.log(app.sumatoriaSerieDos(2));
 console.log(app.sumatoriaSerieDos(3));
 console.log(app.sumatoriaSerieDos(7));
 
+console.log("Es primo:");
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(101));
 console.log(app.esPrimo(190));
 
+console.log("Los multiplos de 3 son:");
 console.log(app.obtenerMultiplos(10, 25));
 
+console.log("Los impares son:");
 console.log(app.obtenerImpares(5, 30));
 console.log(app.obtenerImpares(30, 5));
 console.log(app.obtenerImpares(30, 5));
