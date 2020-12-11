@@ -32,7 +32,22 @@ export default class App {
       }
       i++;
     } while (i <= numero);
-    return resultado
+    return resultado;
+  }
+
+  obtenerMultiplos(inicio, fin) {
+    let i = inicio;
+    let resultado = "";
+    let multiplos = [];
+    do {
+      for (i; i <= fin; i++) {
+        if (i % 3 == 0 || i == 1) {
+          multiplos.push(i);
+          resultado = resultado + i;
+        }
+      }
+    } while (i <= fin);
+    return resultado;
   }
 }
 
@@ -47,3 +62,13 @@ console.log(app.sumatoriaSerieDos(7));
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(101));
 console.log(app.esPrimo(190));
+
+console.log(app.obtenerMultiplos(10, 25));
+
+/*
+console.log(app.obtenerImpares(5, 30));
+console.log(app.obtenerImpares(30, 5));
+console.log(app.obtenerImpares(30, 5));
+console.log(app.obtenerImpares(5, 10));
+console.log(app.obtenerImpares(10, 5));
+
