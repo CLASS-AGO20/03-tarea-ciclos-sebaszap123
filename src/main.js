@@ -22,14 +22,17 @@ export default class App {
   }
 
   esPrimo(numero) {
-    let resultado;
+    let resultado = 0;
+    let i = 1;
     do {
       if ((numero = 1 && numero % 2 !== 0)) {
-        resultado = false;
-      } else if (numero % 2 == 0) {
         resultado = true;
+      } else if (numero % 2 == 0) {
+        resultado = false;
       }
-    } while (numero >= 1);
+      i++;
+    } while (i <= numero);
+    return resultado
   }
 }
 
@@ -41,4 +44,6 @@ console.log(app.sumatoriaSerieDos(2));
 console.log(app.sumatoriaSerieDos(3));
 console.log(app.sumatoriaSerieDos(7));
 
-console.log(app.esPrimo(3))
+console.log(app.esPrimo(3));
+console.log(app.esPrimo(101));
+console.log(app.esPrimo(190));
