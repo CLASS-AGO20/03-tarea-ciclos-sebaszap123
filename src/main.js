@@ -49,6 +49,30 @@ export default class App {
     } while (i <= fin);
     return resultado;
   }
+
+  obtenerImpares(numero1, numero2) {
+    let i = 0;
+    let mayor;
+    let impares = [];
+    let string = "";
+    do {
+      if (numero1 <= numero2) {
+        i = numero1;
+        mayor = numero2;
+      } else if (numero2 <= numero1) {
+        i = numero2;
+        mayor = numero1;
+      }
+      for (i; i <= mayor; i++) {
+        if (i % 2 !== 0 || i == 1) {
+          impares.push(i);
+        }
+      }
+      impares.sort((a, b) => b - a);
+      string = string + impares;
+    } while (i <= mayor);
+    return string;
+  }
 }
 
 let app = new App();
@@ -65,10 +89,8 @@ console.log(app.esPrimo(190));
 
 console.log(app.obtenerMultiplos(10, 25));
 
-/*
 console.log(app.obtenerImpares(5, 30));
 console.log(app.obtenerImpares(30, 5));
 console.log(app.obtenerImpares(30, 5));
 console.log(app.obtenerImpares(5, 10));
 console.log(app.obtenerImpares(10, 5));
-
